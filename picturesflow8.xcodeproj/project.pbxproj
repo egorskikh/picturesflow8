@@ -10,7 +10,6 @@
 		033ACD00D18B7A85BA1CFCEA /* Pods_picturesflow8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572C15D12CF7D1CE9991E5D6 /* Pods_picturesflow8.framework */; };
 		7BE2B46B2603BCC600C905A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B46A2603BCC600C905A6 /* AppDelegate.swift */; };
 		7BE2B46D2603BCC600C905A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B46C2603BCC600C905A6 /* SceneDelegate.swift */; };
-		7BE2B46F2603BCC600C905A6 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B46E2603BCC600C905A6 /* DescriptionViewController.swift */; };
 		7BE2B4722603BCC600C905A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE2B4702603BCC600C905A6 /* Main.storyboard */; };
 		7BE2B4742603BCCA00C905A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE2B4732603BCCA00C905A6 /* Assets.xcassets */; };
 		7BE2B4772603BCCA00C905A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE2B4752603BCCA00C905A6 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		7BE2B4902603BDC500C905A6 /* RandomPicturesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B48F2603BDC500C905A6 /* RandomPicturesResponse.swift */; };
 		7BE2B4942603BDDD00C905A6 /* TabBarTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B4932603BDDD00C905A6 /* TabBarTitle.swift */; };
 		7BE2B4982603BDF000C905A6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B4972603BDF000C905A6 /* TabBarController.swift */; };
-		7BE2B49D2603BE9B00C905A6 /* SavedPhCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE2B49C2603BE9B00C905A6 /* SavedPhCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +29,6 @@
 		7BE2B4672603BCC600C905A6 /* picturesflow8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picturesflow8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE2B46A2603BCC600C905A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BE2B46C2603BCC600C905A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BE2B46E2603BCC600C905A6 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		7BE2B4712603BCC600C905A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BE2B4732603BCCA00C905A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE2B4762603BCCA00C905A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,7 +40,6 @@
 		7BE2B48F2603BDC500C905A6 /* RandomPicturesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPicturesResponse.swift; sourceTree = "<group>"; };
 		7BE2B4932603BDDD00C905A6 /* TabBarTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTitle.swift; sourceTree = "<group>"; };
 		7BE2B4972603BDF000C905A6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		7BE2B49C2603BE9B00C905A6 /* SavedPhCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPhCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +95,6 @@
 				7BE2B4A62603C0C600C905A6 /* App */,
 				7BE2B4A72603C0CE00C905A6 /* Tab Bar */,
 				7BE2B4A82603C11600C905A6 /* Random Pictures */,
-				7BE2B4A92603C13300C905A6 /* Saved Pictures */,
 			);
 			path = picturesflow8;
 			sourceTree = "<group>";
@@ -131,14 +126,6 @@
 				7BE2B4AA2603C15000C905A6 /* Controllers */,
 			);
 			path = "Random Pictures";
-			sourceTree = "<group>";
-		};
-		7BE2B4A92603C13300C905A6 /* Saved Pictures */ = {
-			isa = PBXGroup;
-			children = (
-				7BE2B4AF2603C1D500C905A6 /* Controllers */,
-			);
-			path = "Saved Pictures";
 			sourceTree = "<group>";
 		};
 		7BE2B4AA2603C15000C905A6 /* Controllers */ = {
@@ -181,15 +168,6 @@
 				7BE2B4932603BDDD00C905A6 /* TabBarTitle.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		7BE2B4AF2603C1D500C905A6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7BE2B46E2603BCC600C905A6 /* DescriptionViewController.swift */,
-				7BE2B49C2603BE9B00C905A6 /* SavedPhCollectionViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7BE2B4B02603C1E500C905A6 /* Storyboards */ = {
@@ -337,10 +315,8 @@
 				7BE2B4842603BD8000C905A6 /* RandomPhCollectionViewController.swift in Sources */,
 				7BE2B4942603BDDD00C905A6 /* TabBarTitle.swift in Sources */,
 				7BE2B4982603BDF000C905A6 /* TabBarController.swift in Sources */,
-				7BE2B46F2603BCC600C905A6 /* DescriptionViewController.swift in Sources */,
 				7BE2B4812603BD4700C905A6 /* PictureCollectionViewCell.swift in Sources */,
 				7BE2B46B2603BCC600C905A6 /* AppDelegate.swift in Sources */,
-				7BE2B49D2603BE9B00C905A6 /* SavedPhCollectionViewController.swift in Sources */,
 				7BE2B4882603BD9F00C905A6 /* NetworkService.swift in Sources */,
 				7BE2B4902603BDC500C905A6 /* RandomPicturesResponse.swift in Sources */,
 				7BE2B46D2603BCC600C905A6 /* SceneDelegate.swift in Sources */,

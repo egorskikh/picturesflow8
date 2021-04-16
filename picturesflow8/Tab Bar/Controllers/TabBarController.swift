@@ -18,15 +18,10 @@ public class TabBarController: UITabBarController {
     
     private func setupNavigationController() {
         let randomPhVС = RandomPhCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
-   //     let savedPhVC = SavedPhCollectionViewController(collectionViewLayout: UICollectionViewLayout())
-        
         viewControllers = [
             UITabBarController.generateNavigationController(rootVC: randomPhVС,
                                                             title: "Random",
                                                             systemImage: "eyeglasses")
-         //   UITabBarController.generateNavigationController(rootVC: savedPhVC,
-           //                                                 title: "Saved",
-            //                                               systemImage: "arrow.up.heart.fill")
         ]
     }
     
