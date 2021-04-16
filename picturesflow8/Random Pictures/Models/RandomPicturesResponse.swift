@@ -8,6 +8,7 @@
 import Foundation
 
 struct RandomPicturesResponse: Decodable {
+    
     let width: Int
     let height: Int
     let urls: [URLKing.RawValue:String]
