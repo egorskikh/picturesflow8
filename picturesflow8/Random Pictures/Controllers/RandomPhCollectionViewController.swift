@@ -31,13 +31,7 @@ class RandomPhCollectionViewController: UICollectionViewController {
                                target: self,
                                action: #selector(sharePicturesTapped))
     }()
-    
-    private lazy var savePicturesButtonItem: UIBarButtonItem = {
-        return UIBarButtonItem(barButtonSystemItem: .add,
-                               target: self,
-                               action: #selector(savePicturesTapped))
-    }()
-    
+        
     private var nuberOfSelectedPictures: Int {
         return collectionView.indexPathsForSelectedItems?.count ?? 0
     }
@@ -53,7 +47,6 @@ class RandomPhCollectionViewController: UICollectionViewController {
     
     private func updateNavigateBarState() {
         sharePicturesButtonItem.isEnabled = nuberOfSelectedPictures > 0
-        savePicturesButtonItem.isEnabled = nuberOfSelectedPictures > 0
     }
     
     func refresh() {
@@ -89,11 +82,6 @@ class RandomPhCollectionViewController: UICollectionViewController {
         present(shareController, animated: true, completion: nil)
     }
     
-    @objc private func savePicturesTapped() {
-        print(#function)
-        
-        // ... save in app
-    }
     
     // MARK: - Setup Elements
     
@@ -118,27 +106,11 @@ class RandomPhCollectionViewController: UICollectionViewController {
         navigationItem.rightBarButtonItems = [
             updatePicturesButtonItem,
             sharePicturesButtonItem,
-            savePicturesButtonItem
         ]
         
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    // MARK: UICollectionViewDataSource
-    
-    //    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
+
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -71,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7BC64708262B4FE300D7AB36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BE2B4802603BD4700C905A6 /* PictureCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7BE2B45E2603BCC600C905A6 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +129,7 @@
 		7BE2B4A82603C11600C905A6 /* Random Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				7BC64708262B4FE300D7AB36 /* View */,
 				7BE2B4AC2603C16700C905A6 /* Networking */,
 				7BE2B4AB2603C15900C905A6 /* Models */,
 				7BE2B4AA2603C15000C905A6 /* Controllers */,
@@ -132,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				7BE2B4832603BD8000C905A6 /* RandomPhCollectionViewController.swift */,
-				7BE2B4802603BD4700C905A6 /* PictureCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
