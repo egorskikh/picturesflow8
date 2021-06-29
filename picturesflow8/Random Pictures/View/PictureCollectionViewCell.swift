@@ -38,11 +38,6 @@ class RandomPicuresCell: UICollectionViewCell {
         }
     }
     
-    private func updateSelectedState() {
-        picturesImageView.alpha = isSelected ? 0.7 : 1
-        checkmark.alpha = isSelected ? 1 : 0
-    }
-    
     override var isSelected: Bool {
         didSet {
             updateSelectedState()
@@ -55,12 +50,25 @@ class RandomPicuresCell: UICollectionViewCell {
         picturesImageView.image = nil
     }
     
+    // MARK: - Life Cycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         updateSelectedState()
         setupImageView()
         setupCheckmarkView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Privet method
+    
+    private func updateSelectedState() {
+        picturesImageView.alpha = isSelected ? 0.7 : 1
+        checkmark.alpha = isSelected ? 1 : 0
     }
     
     private func setupImageView() {
@@ -81,13 +89,6 @@ class RandomPicuresCell: UICollectionViewCell {
             checkmark.bottomAnchor.constraint(equalTo: picturesImageView.bottomAnchor, constant: -8)
         ])
     }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
         
 }
 

@@ -9,6 +9,8 @@ import UIKit
 
 class RandomPhCollectionViewController: UICollectionViewController {
     
+    // MARK: - Property
+    
     private let networkDataFetcher = NetworkDataFetcher()
     private var pictures = [RandomPicturesResponse]()
     private var selectedPictures = [UIImage]()
@@ -16,7 +18,7 @@ class RandomPhCollectionViewController: UICollectionViewController {
     private let itemsPerRow: CGFloat = 2
     private let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
-    // BarButtonItem
+    //  MARK: - BarButtonItem
     
     private lazy var updatePicturesButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .refresh,
@@ -33,6 +35,8 @@ class RandomPhCollectionViewController: UICollectionViewController {
     private var nuberOfSelectedPictures: Int {
         return collectionView.indexPathsForSelectedItems?.count ?? 0
     }
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +97,7 @@ class RandomPhCollectionViewController: UICollectionViewController {
         collectionView.allowsMultipleSelection = true
     }
     
+    //  MARK: - Navigation Bar Item
     private func setupNavigationBarItem() {
         
         let title = UILabel()
@@ -115,8 +120,8 @@ class RandomPhCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RandomPicuresCell.reuseId, for: indexPath) as! RandomPicuresCell
-        let unpashPhoto = pictures[indexPath.item]
-        cell.unsplashPhoto = unpashPhoto
+        let unsplashPhoto = pictures[indexPath.item]
+        cell.unsplashPhoto = unsplashPhoto
         return cell
     }
     
@@ -128,12 +133,16 @@ class RandomPhCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
         updateNavigateBarState()
         let cell = collectionView.cellForItem(at: indexPath) as! RandomPicuresCell
+        
         guard let image = cell.picturesImageView.image else { return }
+        
         if let index = selectedPictures.firstIndex(of: image) {
             selectedPictures.remove(at: index)
         }
+        
     }
     
 }
@@ -145,16 +154,15 @@ extension RandomPhCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let picture = pictures[indexPath.item]
-        
         let paddingSpace = sectionInserts.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         let hiegth = CGFloat(picture.height) * widthPerItem / CGFloat(picture.width)
+        
         return CGSize(width: widthPerItem, height: hiegth)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
         return sectionInserts
     }
     
